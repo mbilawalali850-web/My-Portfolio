@@ -1,0 +1,247 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background: #222;
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    gap: 10px;
+}
+
+.header-box a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.header-box a:hover {
+    color: #007bff;
+}
+
+.contact-sources {
+    display: flex;
+    gap: 15px;
+    font-size: 1.2rem;
+}
+
+.myid {
+    margin-right: 15rem;
+    font-weight: 900;
+    font-size: 2rem;
+    font-family: Sans;
+}
+
+.myid {
+    width: 12rem;
+    font-size: 1.3rem;
+    font-weight: 900;
+    position: relative;
+    display: inline-block;
+    margin: 0 2% 0 7%;
+}
+
+.myid::after,
+.myid::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    background: linear-gradient(to right, #6495ED, #FDFD96);
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-out;
+}
+
+.myid::before {
+    top: -5px;
+    transform-origin: right;
+}
+
+.myid:hover::after,
+.myid:hover::before {
+    transform: scaleX(1);
+}
+
+.logo {
+    font-family: sans;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.logo:hover {
+    color: #6495ED;
+}
+
+/* Main Section */
+.main-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.box1 {
+    flex: 2;
+}
+
+.container-box2 {
+    flex: 1;
+    text-align: center;
+}
+
+.box2 {
+    width: 250px;
+    height: 250px;
+    background: #ddd; /* Yahan apni image laga sakte hain */
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 5px solid #007bff;
+    background-image: url("my.jpg");
+    background-size: cover;
+}
+
+.box2:hover{
+    background-image: none;
+    background-image: url("my2.jpg");
+    display: block;
+}
+
+.heading {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.msg {
+    color: #007bff;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Video Section */
+.project-box video {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Footer Styling */
+footer {
+    background: #222;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer-box {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.edit {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 26rem;
+}
+
+button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+a {
+    color: white;
+}
+
+.addres-box {
+    margin-right: 10rem;
+}
+
+.button {
+    text-align: center;
+    margin-right: 4.3rem;
+}
+
+.contact2 {
+    margin-right: 5rem;
+}
+
+.brand {
+    margin-right: 4.3rem;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .header-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column-reverse; /* Mobile pe image upar/niche adjust hogi */
+        text-align: center;
+    }
+
+    .heading {
+        font-size: 1.8rem;
+    }
+
+    .box2 {
+        width: 180px;
+        height: 180px;
+    }
+}
